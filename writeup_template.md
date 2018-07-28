@@ -45,6 +45,21 @@ I used the powerful NVIDIA Convolution Neural Network for this project.The below
 
 ![NVIDIA Architecture](/Writeup_Images/NVIDIA_Architecture.png)
 
+
+| Layer                    | Description                           |
+|:-------------------------|:--------------------------------------|
+| Input                    | 320x65x3 preprocessed image           |
+| Convolution 24@158x31    | 5x5 stride, RELU activation           |
+| Convolution 36@77x14     | 5x5 stride, RELU activation           |
+| Convolution 48@37x5      | 5x5 stride, RELU activation           |
+| Convolution 64@35x3      | 3x3 stride, RELU activation           |
+| Convolution 64@33x1      | 3x3 stride, RELU activation           |
+| Flatten                  | outputs 2112                          |
+| Dense 100                | Fully connected, Linear/No activation |
+| Dense 50                 | Fully connected, Linear/No activation |
+| Dense 10                 | Fully connected, Linear/No activation |
+| Dense 1 (steering angle) | Fully connected, Linear/No activation |
+
 #### 2. Attempts to reduce overfitting in the model
 
 To reduce overfitting, the data was split into 80% training and  20% validation data.The model was trained and validated on different data sets to ensure that the model was not overfitting. The model was tested by running it through the simulator and ensuring that the vehicle could stay on the track. 
@@ -124,10 +139,14 @@ Total Images : 48216
 
 The overall strategy for deriving a model architecture was to start with the default NVIDIA architecture.This model gave better results compared to LENET.I added Lambda layer to mean centering and normalization.Also added a layer to crop 70 pixel from top and 25 from bottom.This was required since the data  in top was mainly trees and sky while data in bottom was hood of the car.Cropping helps in extracting data from Region of interest.
 
-##### Uncropped Original Image                                ##### Cropped Image
+##### Un-cropped Original Image                                  
 
 
-![Center Original](/Writeup_Images/center_orig.jpg)          ![Center Cropped](/Writeup_Images/center_cropped.jpg)
+![Center Original](/Writeup_Images/center_orig.jpg)            
+
+
+#####Cropped Image
+![Center Cropped](/Writeup_Images/center_cropped.jpg)
   
 
 
