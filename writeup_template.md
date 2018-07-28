@@ -90,32 +90,32 @@ Total Validation data : 9644
 Total Images : 48216
 
 
-###### Original Center Camera Image
+##### Original Center Camera Image
 
 
 ![Center Original](/Writeup_Images/center_orig.jpg) 
      
-###### Flipped Center Camera Image
+##### Flipped Center Camera Image
 
 
 ![Center Flipped](/Writeup_Images/center_flipped.jpg) 
 
-###### Original Left Camera Image
+##### Original Left Camera Image
 
 
 ![Left Original](/Writeup_Images/left_orig.jpg)        
 
-###### Flipped Left Camera Image
+##### Flipped Left Camera Image
 
 
  ![Left Flipped](/Writeup_Images/left_flipped.jpg) 
 
-###### Original Right Camera Image
+##### Original Right Camera Image
 
 
 ![Right Original](/Writeup_Images/right_orig.jpg)        
 
-###### Flipped Right Camera Image
+##### Flipped Right Camera Image
 
 
 ![Right Flipped](/Writeup_Images/right_flipped.jpg) 
@@ -124,15 +124,14 @@ Total Images : 48216
 
 The overall strategy for deriving a model architecture was to start with the default NVIDIA architecture.This model gave better results compared to LENET.I added Lambda layer to mean centering and normalization.Also added a layer to crop 70 pixel from top and 25 from bottom.This was required since the data  in top was mainly trees and sky while data in bottom was hood of the car.Cropping helps in extracting data from Region of interest.
 
-###### Uncropped Original Image
+##### Uncropped Original Image
 
 
 ![Center Original](/Writeup_Images/center_orig.jpg)    
 
 
 
-###### Cropped Image
-
+##### Cropped Image
  ![Center Cropped](/Writeup_Images/center_cropped.jpg) 
 
 
