@@ -124,15 +124,11 @@ Total Images : 48216
 
 The overall strategy for deriving a model architecture was to start with the default NVIDIA architecture.This model gave better results compared to LENET.I added Lambda layer to mean centering and normalization.Also added a layer to crop 70 pixel from top and 25 from bottom.This was required since the data  in top was mainly trees and sky while data in bottom was hood of the car.Cropping helps in extracting data from Region of interest.
 
-##### Uncropped Original Image
+##### Uncropped Original Image                                ##### Cropped Image
 
 
-![Center Original](/Writeup_Images/center_orig.jpg)    
-
-
-
-##### Cropped Image
- ![Center Cropped](/Writeup_Images/center_cropped.jpg) 
+![Center Original](/Writeup_Images/center_orig.jpg)          ![Center Cropped](/Writeup_Images/center_cropped.jpg)
+  
 
 
 
