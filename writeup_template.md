@@ -39,6 +39,8 @@ The model.py file contains the code for training and saving the convolution neur
 
 I used the powerful NVIDIA Convolution Neural Network for this project.The below figure depicts the architecture and layers of the model.
 
+
+######NVIDIA Architecture
 ![NVIDIA Architecture](/Writeup_Images/NVIDIA_Architecture.png)
 
 #### 2. Attempts to reduce overfitting in the model
@@ -49,13 +51,17 @@ I plotted the models mean squared error loss and found that it was low for train
 
 Below plot signifies the impact of adding Dropout to the model.
 
+
+#####Model MSE with Dropout
 ![Model MSE with Dropout](/Writeup_Images/loss_plot_with_dropout.png)
 
+
+######Model MSE without Dropout
 ![Model MSE without Dropout](/Writeup_Images/loss_plot_without_dropout.png)
 
 #### 3. Model parameter tuning
 
-Adam Optimizer with default learning rate was used.  (model.py line 72).
+Adam Optimizer with default learning rate was used.  
 
 #### 4. Appropriate training data
 
@@ -77,25 +83,52 @@ Total Training Data : 38572
 Total Validation data : 9644
 Total Images : 48216
 
-![Center Original](/Writeup_Images/center_orig.jpg)      ![Center Flipped](/Writeup_Images/center_flipped.jpg) 
-![Left Original](/Writeup_Images/left_orig.jpg)          ![Left Flipped](/Writeup_Images/left_flipped.jpg) 
-![Right Original](/Writeup_Images/right_orig.jpg)        ![Right Flipped](/Writeup_Images/right_flipped.jpg) 
+
+######Original Center Camera Image
+![Center Original](/Writeup_Images/center_orig.jpg) 
+     
+######Flipped Center Camera Image
+![Center Flipped](/Writeup_Images/center_flipped.jpg) 
+
+######Original Left Camera Image
+![Left Original](/Writeup_Images/left_orig.jpg)        
+
+######Flipped Left Camera Image
+ ![Left Flipped](/Writeup_Images/left_flipped.jpg) 
+
+######Original Right Camera Image
+![Right Original](/Writeup_Images/right_orig.jpg)        
+
+######Flipped Right Camera Image
+![Right Flipped](/Writeup_Images/right_flipped.jpg) 
 
 ##### Model Architecture
 
 The overall strategy for deriving a model architecture was to start with the default NVIDIA architecture.This model gave better results compared to LENET.I added Lambda layer to mean centering and normalization.Also added a layer to crop 70 pixel from top and 25 from bottom.This was required since the data  in top was mainly trees and sky while data in bottom was hood of the car.Cropping helps in extracting data from Region of interest.
 
-![Center Original](/Writeup_Images/center_orig.png)     ![Center Cropped](/Writeup_Images/center_cropped.jpg) 
+######Uncropped Original Image
+![Center Original](/Writeup_Images/center_orig.jpg)    
+
+
+
+######Cropped Image
+ ![Center Cropped](/Writeup_Images/center_cropped.jpg) 
+
+
 
 In order to gauge how well the model was working, I split my image and steering angle data into a training and validation set. I found that my first model had a low mean squared error on the training set but a high mean squared error on the validation set. This implied that the model was overfitting. Hence I added Dropout of 0.5 to the Dense Layers.This step reduced the MSE for validation set.We use MSE instead of Cross Entropy as we need a regression network and not a classification network.Adam optimizer was used.Initially I trained the model for 10 Epochs and noticed that the MSE spiked after Epoch 4-5.Hence the final Epoch number used was 5 with Dropout of 0.5.This gave perfect result with no overfitting.The model was saved as Model.h5
 
 The final step was to run the simulator with the saved model to see how well the car was driving.I first started with the default speed of 9mph.The car did pretty good sticking to the center of the road.
 
+
+######9mph Video
 ![9mph Video](/Writeup_Images/video_9mph.gif) 
 
 
 The next step I wanted to try was increasing the speed to see how the car handles itself while taking steep turns, especially the one after the bridge.The below video is simulation with speed 15mph.I have checked in the drive.py file with speed 15mph.
 
+
+######15mph Video
 ![15mph Video](/Writeup_Images/video_15mph.gif) 
 
 
