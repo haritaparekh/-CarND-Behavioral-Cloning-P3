@@ -40,7 +40,7 @@ The model.py file contains the code for training and saving the convolution neur
 I used the powerful NVIDIA Convolution Neural Network for this project.The below figure depicts the architecture and layers of the model.
 
 
-#####NVIDIA Architecture
+##### NVIDIA Architecture
 
 
 ![NVIDIA Architecture](/Writeup_Images/NVIDIA_Architecture.png)
@@ -54,11 +54,15 @@ I plotted the models mean squared error loss and found that it was low for train
 Below plot signifies the impact of adding Dropout to the model.
 
 
-#####Model MSE with Dropout
+##### Model MSE with Dropout
+
+
 ![Model MSE with Dropout](/Writeup_Images/loss_plot_with_dropout.png)
 
 
-######Model MSE without Dropout
+###### Model MSE without Dropout
+
+
 ![Model MSE without Dropout](/Writeup_Images/loss_plot_without_dropout.png)
 
 #### 3. Model parameter tuning
