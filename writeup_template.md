@@ -145,7 +145,9 @@ The overall strategy for deriving a model architecture was to start with the def
 ![Center Original](/Writeup_Images/center_orig.jpg)            
 
 
-#####Cropped Image
+##### Cropped Image
+
+
 ![Center Cropped](/Writeup_Images/center_cropped.jpg)
   
 
