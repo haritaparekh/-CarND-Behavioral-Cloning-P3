@@ -40,7 +40,9 @@ The model.py file contains the code for training and saving the convolution neur
 I used the powerful NVIDIA Convolution Neural Network for this project.The below figure depicts the architecture and layers of the model.
 
 
-######NVIDIA Architecture
+#####NVIDIA Architecture
+
+
 ![NVIDIA Architecture](/Writeup_Images/NVIDIA_Architecture.png)
 
 #### 2. Attempts to reduce overfitting in the model
