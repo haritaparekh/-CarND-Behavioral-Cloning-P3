@@ -54,13 +54,13 @@ I plotted the models mean squared error loss and found that it was low for train
 Below plot signifies the impact of adding Dropout to the model.
 
 
-##### Model MSE with Dropout
+#####                                                                      Model MSE with Dropout
 
 
 ![Model MSE with Dropout](/Writeup_Images/loss_plot_with_dropout.png)
 
 
-###### Model MSE without Dropout
+##### Model MSE without Dropout
 
 
 ![Model MSE without Dropout](/Writeup_Images/loss_plot_without_dropout.png)
